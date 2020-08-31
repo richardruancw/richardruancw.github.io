@@ -129,7 +129,7 @@ def box_muller():
     return math.sqrt(-2 * math.log(u1)) * math.cos(2 * math.pi * u2)
 ```
 
-This is based on the famous `Box-Muller` transformation. Specifically, let \$$ U_1, U_2  \sim U[0, 1], U_1 \perp \!\!\! \perp  U_2 $$
+This is based on the famous `Box-Muller` transformation. Specifically, let \$$ U_1, U_2  \sim U[0, 1] $$
 Then
 \$$ 
 Z_1 = Rcos(\Theta) = \sqrt{-2ln(U_1)} \cdot cos(2 \pi U_2) \\
