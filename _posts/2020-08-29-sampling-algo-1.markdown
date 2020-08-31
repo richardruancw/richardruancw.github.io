@@ -130,9 +130,11 @@ def box_muller():
 ```
 
 This is based on the famous `Box-Muller` transformation. Specifically, let \$$ U_1, U_2  \sim U[0, 1] $$
-Then
+
+Then 
+
 \$$ 
-Z_1 = Rcos(\Theta) = \sqrt{-2ln(U_1)} \cdot cos(2 \pi U_2) \\
+Z_1 = Rcos(\Theta) = \sqrt{-2ln(U_1)} \cdot cos(2 \pi U_2);
 Z_2 = Rsin(\Theta) = \sqrt{-2ln(U_1)} \cdot sin(2 \pi U_2) 
 $$
 
