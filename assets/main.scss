@@ -1,0 +1,322 @@
+---
+---
+
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+  "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif;
+$code-font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+$brand-color: #0f766e;
+$text-color: #17212b;
+$background-color: #fbfcfd;
+$grey-color: #64748b;
+$grey-color-light: #e2e8f0;
+$grey-color-dark: #334155;
+$content-width: 860px;
+
+@import "minima";
+
+:root {
+  --ink: #17212b;
+  --muted: #64748b;
+  --line: #dbe3eb;
+  --paper: #ffffff;
+  --soft: #f4f7f9;
+  --teal: #0f766e;
+  --blue: #2563eb;
+  --coral: #e11d48;
+  --amber: #b45309;
+}
+
+html {
+  background: var(--soft);
+}
+
+body {
+  color: var(--ink);
+  background:
+    linear-gradient(90deg, rgba(15, 118, 110, 0.06) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(37, 99, 235, 0.045) 1px, transparent 1px),
+    var(--soft);
+  background-size: 44px 44px;
+  line-height: 1.72;
+}
+
+.site-header {
+  min-height: 64px;
+  border-top: 4px solid var(--teal);
+  border-bottom: 1px solid rgba(100, 116, 139, 0.22);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+}
+
+.site-title,
+.site-title:visited {
+  color: var(--ink);
+  font-weight: 750;
+  letter-spacing: 0;
+}
+
+.site-title::before {
+  content: ">";
+  margin-right: 0.45rem;
+  color: var(--coral);
+  font-family: $code-font-family;
+  font-weight: 700;
+}
+
+.site-nav .page-link {
+  color: var(--grey-color-dark);
+  font-weight: 600;
+}
+
+.site-nav .page-link:hover {
+  color: var(--teal);
+  text-decoration: none;
+}
+
+.page-content {
+  padding: 42px 0 56px;
+}
+
+.home,
+.post,
+.page {
+  position: relative;
+}
+
+.home::before,
+.post::before,
+.page::before {
+  content: "";
+  display: block;
+  width: 84px;
+  height: 4px;
+  margin-bottom: 26px;
+  background: linear-gradient(90deg, var(--teal), var(--blue), var(--coral));
+  border-radius: 4px;
+}
+
+.post-list {
+  display: grid;
+  gap: 18px;
+  margin-left: 0;
+}
+
+.post-list > li {
+  margin-bottom: 0;
+  padding: 22px 24px;
+  border: 1px solid rgba(100, 116, 139, 0.2);
+  border-left: 4px solid var(--teal);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 12px 34px rgba(15, 23, 42, 0.06);
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.post-list > li:hover {
+  transform: translateY(-2px);
+  border-color: rgba(15, 118, 110, 0.45);
+  box-shadow: 0 16px 42px rgba(15, 23, 42, 0.09);
+}
+
+.post-meta {
+  color: var(--muted);
+  font-family: $code-font-family;
+  font-size: 0.82rem;
+}
+
+.post-link {
+  color: var(--ink);
+  font-weight: 760;
+}
+
+.post-link:hover {
+  color: var(--teal);
+  text-decoration: none;
+}
+
+.post-title,
+.page-heading {
+  color: var(--ink);
+  font-weight: 780;
+  letter-spacing: 0;
+}
+
+.post-content h2,
+.post-content h3,
+.post-content h4 {
+  color: var(--ink);
+  font-weight: 730;
+}
+
+.post-content h2 {
+  padding-top: 0.35rem;
+  border-bottom: 1px solid var(--line);
+}
+
+a,
+a:visited {
+  color: var(--blue);
+}
+
+a:hover {
+  color: var(--teal);
+}
+
+code {
+  color: #9f1239;
+  background-color: #fff1f2;
+  border: 1px solid #ffe4e6;
+  border-radius: 5px;
+}
+
+.post-content .highlighter-rouge,
+.post-content figure.highlight {
+  margin: 1.6rem 0;
+  border: 1px solid #26364f;
+  border-radius: 8px;
+  background: #0b1020;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.16);
+  overflow: hidden;
+}
+
+.post-content .highlighter-rouge .highlight,
+.post-content .highlight,
+.post-content pre,
+.post-content pre.highlight {
+  margin-bottom: 0;
+  border: 0;
+  border-radius: 8px;
+  background: #0b1020;
+  background-color: #0b1020;
+}
+
+.post-content pre {
+  padding: 18px 20px;
+  overflow-x: auto;
+}
+
+.post-content pre code,
+.post-content .highlight code {
+  color: #dbeafe;
+  background: transparent;
+  border: 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.post-content .highlight .c,
+.post-content .highlight .cm,
+.post-content .highlight .c1,
+.post-content .highlight .cs {
+  color: #8ca3ba;
+  font-style: italic;
+}
+
+.post-content .highlight .k,
+.post-content .highlight .kd,
+.post-content .highlight .kn,
+.post-content .highlight .kp,
+.post-content .highlight .kr,
+.post-content .highlight .o,
+.post-content .highlight .ow {
+  color: #f472b6;
+  font-weight: 700;
+}
+
+.post-content .highlight .nf,
+.post-content .highlight .nc {
+  color: #fbbf24;
+  font-weight: 700;
+}
+
+.post-content .highlight .nb,
+.post-content .highlight .bp,
+.post-content .highlight .kt {
+  color: #38bdf8;
+}
+
+.post-content .highlight .n,
+.post-content .highlight .na,
+.post-content .highlight .nv,
+.post-content .highlight .vc,
+.post-content .highlight .vg,
+.post-content .highlight .vi {
+  color: #dbeafe;
+}
+
+.post-content .highlight .m,
+.post-content .highlight .mi,
+.post-content .highlight .mf,
+.post-content .highlight .mh,
+.post-content .highlight .mo,
+.post-content .highlight .il {
+  color: #5eead4;
+}
+
+.post-content .highlight .s,
+.post-content .highlight .s1,
+.post-content .highlight .s2,
+.post-content .highlight .sb,
+.post-content .highlight .sc,
+.post-content .highlight .sd,
+.post-content .highlight .se,
+.post-content .highlight .sh,
+.post-content .highlight .si,
+.post-content .highlight .sx,
+.post-content .highlight .sr,
+.post-content .highlight .ss {
+  color: #a7f3d0;
+}
+
+.post-content .highlight .p {
+  color: #cbd5e1;
+}
+
+.post-content .highlight .err {
+  color: #fecaca;
+  background-color: rgba(225, 29, 72, 0.2);
+}
+
+blockquote {
+  color: var(--grey-color-dark);
+  border-left-color: var(--amber);
+  background: rgba(255, 251, 235, 0.72);
+  border-radius: 0 8px 8px 0;
+}
+
+table {
+  background: var(--paper);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.site-footer {
+  border-top: 1px solid rgba(100, 116, 139, 0.22);
+  background: #ffffff;
+}
+
+.footer-heading {
+  color: var(--ink);
+  font-weight: 720;
+}
+
+.footer-col-wrapper,
+.site-footer a {
+  color: var(--muted);
+}
+
+.site-description {
+  color: var(--grey-color-dark);
+  max-width: 34rem;
+}
+
+@media screen and (max-width: 600px) {
+  .site-nav {
+    border-color: rgba(100, 116, 139, 0.28);
+    border-radius: 8px;
+  }
+
+  .post-list > li {
+    padding: 18px;
+  }
+}

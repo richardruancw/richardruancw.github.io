@@ -13,7 +13,7 @@ There are many ways to define a graph $$G(\mathcal{V}, \mathcal{E})$$, where $$\
 
 This is a 
 
-\$$ A = f(x) $$
+$$ A = f(x) $$
 
 Looks good as $$ f(x) $$ is still good.
 

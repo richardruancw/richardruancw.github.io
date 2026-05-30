@@ -21,9 +21,9 @@
 title: Saddle points of magic 
 email: ruanchuanweiAtPolarBear.com(replace arctic animal with google email)
 description: >- # this means to ignore newlines until "baseurl:"
-  Every morden science is indistinguishable from magic. 
+  Any sufficiently advanced technology is indistinguishable from magic. - Arthur C. Clarke
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://richardruancw.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 #twitter_username: jekyllrb
 github_username:  richardruancw
@@ -33,6 +33,9 @@ theme: minima
 plugins:
   - jekyll-feed
 markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
 
 # Exclude from processing.
 # The following items will not be processed, by default.

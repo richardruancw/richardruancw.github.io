@@ -26,7 +26,7 @@ def getUniform7() -> float:
 The property of uniform distribution: conditioning on uniform distribution still gives uniform distribution. 
 
 Assume $$U$$ is uniform from 0 to 10 and $$x \in [1, 7) $$:
-\$$
+$$
 p(U < x|U < 7) = \frac{p(U < x < 7)}{p(U < 7)} = \frac{\frac{x}{10}}{\frac{7}{10}} = \frac{x}{7}
 $$
 
@@ -129,11 +129,11 @@ def box_muller():
     return math.sqrt(-2 * math.log(u1)) * math.cos(2 * math.pi * u2)
 ```
 
-This is based on the famous `Box-Muller` transformation. Specifically, let \$$ U_1, U_2  \sim U[0, 1] $$
+This is based on the famous `Box-Muller` transformation. Specifically, let $$ U_1, U_2  \sim U[0, 1] $$
 
 Then 
 
-\$$ 
+$$ 
 Z_1 = Rcos(\Theta) = \sqrt{-2ln(U_1)} \cdot cos(2 \pi U_2);
 Z_2 = Rsin(\Theta) = \sqrt{-2ln(U_1)} \cdot sin(2 \pi U_2) 
 $$
